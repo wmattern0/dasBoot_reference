@@ -15,13 +15,10 @@ public class ShipwreckControllerTest {
     }
 
     @Test
-    public void list() throws Exception {
+    public void listTest() throws Exception {
 
     }
 
-    @Test
-    public void get() throws Exception {
 
-    }
 
 }

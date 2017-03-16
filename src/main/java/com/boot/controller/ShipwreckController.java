@@ -1,10 +1,7 @@
 package com.boot.controller;
 
 import com.boot.model.Shipwreck;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,8 +15,12 @@ public class ShipwreckController
     }
 
     @RequestMapping(value = "shipwrecks", method = RequestMethod.POST)
-    public Shipwreck get(@PathVariable Long id) {
-        return ShipwreckStub.get(id);
+    public Shipwreck create(@RequestBody Shipwreck shipwreck) {
+        return ShipwreckStub.create(shipwreck);
     }
 
+    @RequestMapping(value = "shipwrecks/{id}", method = RequestMethod.GET)
+    public Shipwreck get(@PathVariable Long id){
+        return ShipwreckStub.get(id);
+    }
 }
