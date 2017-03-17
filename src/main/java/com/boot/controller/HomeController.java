@@ -1,6 +1,8 @@
 package com.boot.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -10,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController
 {
 
-    @RequestMapping("/")
+    @RequestMapping(path = "/", method = RequestMethod.GET)
     public String home() {
-        return "Das Boot, yada yada";
+        return "Das Boot, reporting for duty!";
     }
 }

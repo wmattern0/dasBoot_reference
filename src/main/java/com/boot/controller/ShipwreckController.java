@@ -9,7 +9,7 @@ import java.util.List;
 @RequestMapping("api/v1/")
 public class ShipwreckController
 {
-    @RequestMapping(value = "shipwrecks", method = RequestMethod.GET)
+    @RequestMapping(path = "shipwrecks", method = RequestMethod.GET)
     public List<Shipwreck> list(){
         return ShipwreckStub.list();
     }
